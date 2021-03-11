@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<form action="" method="post" name="registration" id="form">
+		<label for="name">Имя:</label>
+		<input type="text" name="name" placeholder="Имя" id="name"><br><br>
+
+		<label for="email">Email:</label>
+		<input type="text" name="email" placeholder="Имя" id="email"><br><br>
+
+		<label for="password">Пароль</label>
+		<input type="password" name="password" placeholder="введите пароль" id="password"><br><br>
+
+		<label for="repassword">Повторите пароль</label>
+		<input type="password" name="repassword" placeholder="Повторите пароль" id="repassword"><br><br>
+
+		<span>Пол</span>
+		<input type="radio" name="state" id="male"><label for="male">Мужской</label>
+		<input type="radio" name="state" id="female"><label for="female">Женский</label>
+		<input type="button" onclick="valid(document.getElementById('form'))" name="submit" value="Готово">
+	</form>
+</body>
+</html>
