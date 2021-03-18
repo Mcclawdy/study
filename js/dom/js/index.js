@@ -28,12 +28,39 @@ function createModal(title, body) {
                 <button class="modal-window-close">X</button>
             </div>
             <div class="modal-window-body">${body}</div>
+            <div class="modal-window-footer">
+            	<button class="modal-window-close">Отмена</button>
+            </div>
         </div>
         `;
+
+    modal.addEventListener('click', event => {
+    	// if (event.target.closest('button')) {
+    	// 	modal.remove();
+    	// };
+    	if (event.target.matches('.modal-window-close')){
+    		event.target.closest('.modal-window').remove();
+    	};
+    	
+    });
     return modal;
 }
 
-let modalWindow = createModal('Hello', '<p>This is Modal window</p>');
+function demoHandler(event) {
+	console.log(this, event.target);
+}
 
-document.body.append(modalWindow); //Вставка в DOM
+document.addEventListener('DOMContentLoaded', () => {
+	let modalWindow = createModal('Hello', '<p>This is Modal window</p>');// эта строка не обязательно должна быть тут
+	document.body.append(modalWindow); //Вставка в DOM, это строка ОБЯЗАТЕЛЬНО должна находится в DOMContentLoader
+
+	let demoTable = document.getElementById('demoTable'),
+		demoTd = demoTable.querySelector('.active');
+
+	demoTd.addEventListener('click', demoHandler);
+	demoTable.addEventListener('click', demoHandler);
+	document.addEventListener('click', demoHandler);
+});
+
+
 
