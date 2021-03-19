@@ -1,7 +1,8 @@
 .gallery {
   overflow: hidden;
   position: relative;
-  width: 640px;
+  margin: 0 auto;
+  max-width: 640px;
 }
 
 .gallery img {
@@ -9,10 +10,12 @@
   max-width: 100%;
   object-fit: cover;
   display: none;
+
 }
 
 .gallery .active {
   display: block;
+
 }
 
 .gallery .arrow {
@@ -38,4 +41,8 @@
 
 .gallery .next {
   right: 0;
+}
+
+#id{
+
 }

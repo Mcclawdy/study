@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+.game {
+  background: #333;
+  border: 2px solid #333;
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
+
+.game .knuckle,
+.game .empty {
+  background: #fff;
+  border: 2px solid #333;
+  height: 25%;
+  font-size: 2em;
+  padding: 5%;
+  position: absolute;
+  width: 25%;
+  text-align: center;
+  transition: left .5s linear, top .5s linear;
+}
+
+.game .knuckle:hover {
+  background: #eee;
+  cursor: pointer;
+}
